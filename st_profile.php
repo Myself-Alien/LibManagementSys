@@ -1,1 +1,4 @@
-<h1>Profile</h1>
+<?php 
+include("st_header.php");
+?>
+

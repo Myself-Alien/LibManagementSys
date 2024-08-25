@@ -1,41 +1,6 @@
 <?php
-session_start();
-if (isset($_SESSION['email'])) {
-    $email = $_SESSION['email'];
-} else {
-    echo "Login First";
-    exit();
-}
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "library_db";
-$conn = mysqli_connect($servername, $username, $password, $database);
-if (!$conn) {
-    die("ERROR!" . mysqli_connect_error());
-}
-
-$sql = "SELECT fname, lname, img FROM student_reg WHERE email = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $fname = $row['fname'];
-    $lname = $row['lname'];
-    $img = $row['img'];
-} else {
-    echo "No User Found!";
-}
-
-mysqli_close($conn);
-?>
-<?php
-include("assets/links.php");
 include("st_header.php");
+include("assets/links.php");
 ?>
 <div class="container-fluid g-0 st_content pb-3 pt-3">
     <div class="container">
