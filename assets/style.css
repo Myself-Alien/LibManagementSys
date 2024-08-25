@@ -1,0 +1,133 @@
+body {
+  background-color: #eeeeee;
+  font-family: "Roboto", system-ui;
+}
+.btn-primary {
+  background-color: #00adb5;
+  border-color: #00adb5;
+}
+.btn-primary:hover {
+  background-color: #078f96;
+  border-color: #078f96;
+}
+
+.reg_box {
+  padding: 25px;
+  border: 1px solid #bec5d3;
+  background-color: #fff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.input {
+  border-radius: 0%;
+  border-color: #00adb5;
+}
+.form-label {
+  margin-bottom: 0.2rem;
+}
+.btn_align {
+  margin-bottom: 0rem;
+}
+.btn_align > button > a {
+  text-decoration: none;
+  color: #fff;
+}
+.logout {
+  outline: none;
+  background-color: #393e46;
+  border: none;
+  color: #fff;
+  width: fit-content;
+  font-size: 15px;
+}
+.logout > a {
+  text-decoration: none;
+  color: #f13e3e;
+}
+.navbar-custom {
+  background-color: #393e46 !important;
+}
+.right_pen > div {
+  float: right;
+}
+.header_top {
+  background-color: #00adb5;
+}
+.wl_note {
+  color: #00adb5;
+}
+.st_menu > li > a {
+  color: #00adb5;
+}
+a.wl_note:hover {
+  color: #00adb5;
+}
+.st_menu > li:hover {
+  background-color: #00adb5;
+  color: #393e46;
+  transition: all 0.9s ease-out;
+}
+.st_content {
+  background-color: #bec5d3;
+}
+.fcard {
+  background-color: #fff;
+  border-radius: 0%;
+  text-align: center;
+  border-color: #00adb5;
+}
+.fcard_head {
+  border-top: 1px solid #00adb5;
+  background-color: #00adb5;
+  font-weight: bold;
+}
+.blockquote > p > img {
+  filter: drop-shadow(16px 16px 20px #00adb5);
+}
+.st_content > div > div > div > a {
+  text-decoration: none;
+}
+.fcard_body {
+  padding: 20px;
+  background-color: #d7f0f0 ;
+}
+.fcard:hover .fcard_body {
+  background-color: #393e46;
+  transition: all 0.4s ease-out;
+  color: #fff;
+}
+/*
+.fcard:hover .fcard_img
+{
+  transform: rotate(360deg);
+  transition: all 1s ease-out;
+}*/
+.fcard:hover .fcard_head {
+  background-color: #393e46;
+  color: #00adb5;
+}
+a.st_drop_header:hover
+{
+  background-color: #00adb5;
+  color: #393e46;
+}
+a.st_drop_header_out:hover
+{
+  background-color: #f13e3e;
+  color: #393e46;
+}
+.devider_nomargin
+{
+  margin: 0px;
+}
+.drop_no_pedd
+{
+  padding: 6px;
+  border-radius: 0px;
+  background-color: #393e46;
+  color: #fff;
+}
+.clock
+{
+  font-weight: bold;
+  color: #393e46
+}
