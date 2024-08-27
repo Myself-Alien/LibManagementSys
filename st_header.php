@@ -16,7 +16,7 @@ if (!$conn) {
     die("ERROR!" . mysqli_connect_error());
 }
 
-$sql = "SELECT fname, lname, img FROM student_reg WHERE email = ?";
+$sql = "SELECT fname, lname, email, pass, img FROM student_reg WHERE email = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $email);
 $stmt->execute();
@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $fname = $row['fname'];
     $lname = $row['lname'];
+    $email = $row['email'];
+    $pass = $row['pass'];
     $img = $row['img'];
 } else {
     echo "No User Found!";
@@ -62,7 +64,8 @@ include("assets/links.php");
     </div>
     <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center navbar-custom">
         <div class="container">
-            <a href="" class="navbar-brand d-flex w-50 me-auto wl_note">Welcome, <?php echo "$fname" . " " . "$lname"; ?></a>
+            <a href="" class="navbar-brand d-flex w-50 me-auto wl_note">Welcome, 
+                <?php echo "$fname" . " " . "$lname"; ?></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -83,7 +86,7 @@ include("assets/links.php");
             -->
                 <ul class="nav navbar-nav ms-auto w-100 justify-content-end st_menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link" href="st_dash.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Issued Books</a>

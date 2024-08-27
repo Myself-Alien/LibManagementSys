@@ -40,6 +40,9 @@ include("assets/links.php");
                     <pre><input type="file" class="form-control input" id="img" name="img"></pre>
                 </div>
                 <input type="submit" class="btn btn-primary input" name="submit">
+                <button type="button" class="btn btn-primary input reg_back" name="submit" value="Back">
+                    <a href="index.php">Back</a>
+                </button>
             </form>
         </div>
     </div>
